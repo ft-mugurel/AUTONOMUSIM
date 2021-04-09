@@ -28,4 +28,6 @@
             to="/ytu_racing/joint_states" />
   </node>
 
+  <node pkg="stereo_image_proc" name="stereo_image_proc" type="stereo_image_proc" ns="zed" />
+
 </launch>
