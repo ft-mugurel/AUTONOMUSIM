@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot name="YTR_04_A" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:property name="tyre_mass" value="5"/>
+<xacro:property name="chassis_mass" value="140"/>
+<xacro:property name="chassis_x" value="-0.69"/>
+<xacro:property name="chassis_y" value="0"/>
+<xacro:property name="chassis_z" value="0.1"/>
+<xacro:property name="PI" value="3.1415926835897931"/>
+
+<xacro:macro name="chassis_inertial_params">
+<inertial>
+  <origin xyz="${chassis_x} ${chassis_y} ${chassis_z}" rpy="0 0 0" />
+  <mass value="${chassis_mass}" />
+  <inertia 
+    ixx="16.3"
+    ixy="0"          
+    ixz="0"
+    iyy="33.6"
+    iyz="0"
+    izz="47.9" />
+</inertial>
+</xacro:macro>
+
+<xacro:macro name="wheels_inertia">
+<inertial>  
+  <origin xyz="0 0 0" rpy="0 0 0" />
+  <mass value="${tyre_mass}"/>
+  <inertia 
+    ixx="0.3"
+    ixy="0" 
+    ixz="0" 
+    iyy="0.2"
+    iyz="0" 
+    izz="0.2"   />
+</inertial>
+</xacro:macro>
+
+<xacro:macro name="steering_wheel_inertial_params">
+<inertial>
+  <origin xyz="0 0 0" rpy="0 0 0" />
+  <mass value="1" />
+  <inertia
+    ixx="0.004"
+    ixy="0" 
+    ixz="0" 
+    iyy="0.004"
+    iyz="0" 
+    izz="0.004"   />
+</inertial>
+</xacro:macro>
+</robot>

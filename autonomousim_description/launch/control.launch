@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node name="controller_spawner" 
+        pkg="controller_manager" 
+        type="spawner" 
+        respawn="false"
+        output="screen" 
+        ns="/ytu_racing" 
+        args="--shutdown-time 1 --namespace=/ytu_racing
+                joint_state_controller
+                left_steering_joint_controller
+                right_steering_joint_controller
+                left_rear_axle_controller
+                right_rear_axle_controller
+                left_front_axle_controller
+                right_front_axle_controller"/>
+
+  <rosparam file="$(find autonomousim_description)/config/car_config.yaml" 
+            command="load"/>
+
+  <node name="robot_state_publisher" 
+        pkg="robot_state_publisher" 
+        type="robot_state_publisher"
+        respawn="false" 
+        output="screen">
+    <remap from="/joint_states" 
+            to="/ytu_racing/joint_states" />
+  </node>
+
+</launch>
