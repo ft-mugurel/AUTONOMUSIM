@@ -69,7 +69,7 @@
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <gazebo_ros                                                                 
-      gazebo_plugin_path="${prefix}/lib"
-      gazebo_model_path="${prefix}/.." /> 
+      gazebo_plugin_path="/home/mtu/autonomousim_ws/src/lib"
+      gazebo_model_path="/home/mtu/autonomousim_ws/src/" /> 
     </export>
 </package>

@@ -29,5 +29,5 @@
   </node>
 
   <node pkg="stereo_image_proc" name="stereo_image_proc" type="stereo_image_proc" ns="zed" />
-
+  <node pkg="tf" name="point2_to_base_link_tf" type="static_transform_publisher" args="-0.12 0.06 0.9 -1.57079632679 0 -1.57079632679 base_link zed_frame 100.0" />
 </launch>
