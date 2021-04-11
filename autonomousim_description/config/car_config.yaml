@@ -11,12 +11,12 @@ ytu_racing:
   left_front_axle_controller:
     type: velocity_controllers/JointVelocityController
     joint: left_front_axle
-    pid: {p: 1500.0, i: 100.0, d: 750.0}
+    pid: {p: 500.0, i: 10.0, d: 100.0}
 
   right_front_axle_controller:
     type: velocity_controllers/JointVelocityController
     joint: right_front_axle
-    pid: {p: 1500.0, i: 100.0, d: 750.0}
+    pid: {p: 500.0, i: 10.0, d: 100.0}
 
   right_steering_joint_controller:
     type: effort_controllers/JointPositionController
@@ -26,9 +26,9 @@ ytu_racing:
   right_rear_axle_controller:
     type: velocity_controllers/JointVelocityController
     joint: right_rear_axle
-    pid: {p: 1500.0, i: 100.0, d: 750.0}
+    pid: {p: 500.0, i: 10.0, d: 100.0}
 
   left_rear_axle_controller:
     type: velocity_controllers/JointVelocityController
     joint: left_rear_axle
-    pid: {p: 1500.0, i: 100.0, d: 750.0}
+    pid: {p: 500.0, i: 10.0, d: 100.0}
