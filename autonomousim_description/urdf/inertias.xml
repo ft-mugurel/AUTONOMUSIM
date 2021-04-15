@@ -2,7 +2,7 @@
 <robot name="YTR_04_A" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 <xacro:property name="tyre_mass" value="5"/>
-<xacro:property name="chassis_mass" value="140"/>
+<xacro:property name="chassis_mass" value="220"/>
 <xacro:property name="chassis_x" value="-0.69"/>
 <xacro:property name="chassis_y" value="0"/>
 <xacro:property name="chassis_z" value="0.1"/>
