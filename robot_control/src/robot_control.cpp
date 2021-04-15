@@ -531,7 +531,7 @@ void setCommand(const ackermann_msgs::AckermannDriveStamped &msg)
 {   
     // Mapping - linear = v_ref_, angular = alfa_ref_ 
 	double speed_limit = 10.0;  // m/s
-	double angle_limit = PI/0.785398163;   // there should be also urdf limits
+	double angle_limit = PI/0.7;   // there should be also urdf limits
     v_ref_ = saturation(msg.drive.speed, -speed_limit, speed_limit);  
     alfa_ref_ = saturation(msg.drive.steering_angle, -angle_limit, angle_limit);
 }
