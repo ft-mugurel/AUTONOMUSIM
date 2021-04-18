@@ -3,7 +3,7 @@
 
   <env name="GAZEBO_MODEL_PATH" value="$(find autonomousim_description)"/>
   <env name="GAZEBO_RESOURCE_PATH" value="$(find autonomousim_description)"/>
-  <arg name="namespace" default="eufs"/>
+  <arg name="namespace" default="ytu_racing"/>
   <arg name="debug" default="false"/>
   <arg name="gui" default="true"/>
   <arg name="cmd_timeout" default="0.5"/>
